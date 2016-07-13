@@ -32,17 +32,7 @@ public class MainPanel extends JPanel {
     }
 
     private int convertToInt(int x) {
-/*		int c = 0;
-		String padding = "0";
-		while (c < _r) {
-		    String l = new String("0");
-		    padding += l;
-		    c++;
-		}
-		
-		String n = padding + String.valueOf(x);
-		int q = Integer.parseInt(n);
-*/		return x;
+		return x;
     }
     
     private int getNumNeighbors(int x, int y) {
@@ -194,12 +184,7 @@ public class MainPanel extends JPanel {
 		
 		for (int j = 0; j < _size; j++) {
 		    for(int k = 0; k < _size; k++) {
-				if (_cells[j][k].getAlive()) {
-				    toWrite += _cells[j][k].toString();
-				} else {
-				    toWrite += _cells[j][k].toString();
-				}
-			    
+			    toWrite += _cells[j][k].toString();			    
 		    }
 		    toWrite += "\n";
 		}
@@ -223,7 +208,7 @@ public class MainPanel extends JPanel {
 		_running = true;
 		while (_running) {
 		    System.out.println("Running...");
-		    int origR = _r;
+		    /*int origR = _r;
 		    try {
 		    	Thread.sleep(20);
 		    } catch (InterruptedException iex) { }
@@ -231,7 +216,7 @@ public class MainPanel extends JPanel {
 		    	_r += (j % _size) % _maxCount;
 		    	_r += _maxCount;
 		    }
-		    _r = origR;
+		    _r = origR;*/
 		    backup();
 		    calculateNextIteration();
 		}
