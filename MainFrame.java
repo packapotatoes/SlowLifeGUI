@@ -14,20 +14,20 @@ public class MainFrame {
     
     public MainFrame(int size) {
 
-	_frame.setSize(WIDTH, HEIGHT);
-	// Close program when window is closed
-	_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		_frame.setSize(WIDTH, HEIGHT);
+		// Close program when window is closed
+		_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		// Add Main Panel and Button Panel
+		
+		_mainPanel = new MainPanel(size);
 	
-	// Add Main Panel and Button Panel
-	
-	_mainPanel = new MainPanel(size);
-
-	_buttonPanel = new ButtonPanel(_mainPanel);
-	
-	_frame.add(_mainPanel, BorderLayout.NORTH);
-	_frame.add(_buttonPanel, BorderLayout.SOUTH);
-	
-	_frame.setVisible(true);	
+		_buttonPanel = new ButtonPanel(_mainPanel);
+		
+		_frame.add(_mainPanel, BorderLayout.NORTH);
+		_frame.add(_buttonPanel, BorderLayout.SOUTH);
+		
+		_frame.setVisible(true);	
     }
     
 }

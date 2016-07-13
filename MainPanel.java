@@ -32,7 +32,7 @@ public class MainPanel extends JPanel {
     }
 
     private int convertToInt(int x) {
-		int c = 0;
+/*		int c = 0;
 		String padding = "0";
 		while (c < _r) {
 		    String l = new String("0");
@@ -42,7 +42,7 @@ public class MainPanel extends JPanel {
 		
 		String n = padding + String.valueOf(x);
 		int q = Integer.parseInt(n);
-		return q;
+*/		return x;
     }
     
     private int getNumNeighbors(int x, int y) {
@@ -194,11 +194,11 @@ public class MainPanel extends JPanel {
 		
 		for (int j = 0; j < _size; j++) {
 		    for(int k = 0; k < _size; k++) {
-			if (_cells[j][k].getAlive()) {
-			    toWrite += _cells[j][k].toString();
-			} else {
-			    toWrite += _cells[j][k].toString();
-			}
+				if (_cells[j][k].getAlive()) {
+				    toWrite += _cells[j][k].toString();
+				} else {
+				    toWrite += _cells[j][k].toString();
+				}
 			    
 		    }
 		    toWrite += "\n";
